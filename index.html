@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset = "UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Glegoo|Merriweather|Bitter" rel="stylesheet">
+
+</head>
+
+<style>
+
+@font-face{
+    font-family: 'P22_Johnston_Underground';
+    src: url(P22_Johnston_Underground.ttf);
+
+}
+body{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+
+
+}
+
+header{
+    display:block;
+    position:fixed;
+    width:100%;
+    height:30px;
+
+    top: -5px;
+    left: -5px;
+    background-color: rgb(255, 255, 255);
+
+
+}
+
+#name, #about, #work, #contact{
+    display:inline;
+    position:absolute;
+    margin-top: 5px;
+    margin-left:20px;
+
+}
+#name p, #about p, #work p, #contact p{
+
+    color: rgb(0,0,0);
+    font-family: 'P22 Johnston Underground', sans-serif;
+}
+
+#about{
+    margin-left: 47%;
+
+}
+
+#work{
+    margin-left: 53%;
+
+
+}
+#work a:link, #work a:visited, #work a:hover, #work a:active{
+    text-decoration:none;
+    background-color: transparent;
+    color: black;
+}
+
+
+#contact{
+margin-left: 93%;
+
+}
+
+#contactBox{
+
+display:none;
+position:absolute;
+margin-left:0px;
+margin-top: 5px;
+
+
+
+
+
+}
+#contactBox p{
+margin-top: 12px;
+
+}
+
+.contactPop{
+
+
+    display: none;
+    position: absolute;
+    margin-left: 0%;
+    height: 100%;
+
+    background-color: rgb(255,255,255);
+    -webkit-animation-name: contactClose;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-count:infinite;
+    -webkit-animation-fill-mode: forwards;
+
+
+}
+
+@-webkit-keyframes contactClose{
+    from{
+        width:300px;
+    }
+    to{
+        width:0px;
+    }
+}
+
+.contactOff{
+
+    display: inline;
+    position: absolute;
+    margin-left:0%;
+    height: 100%;
+
+    -webkit-animation-name: contactOpen;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-count:infinite;
+    -webkit-animation-fill-mode: forwards;
+
+
+}
+
+@-webkit-keyframes contactOpen{
+    from{
+        width:0px;
+    }
+    to{
+        width:300px;
+    }
+}
+
+.contactInfo{
+    display:none;
+
+
+
+}
+
+.contactOff{
+
+display: inline;
+position:absolute;
+
+font-family: 'Bitter', serif;
+letter-spacing: 1px;
+font-weight:300;
+
+
+}
+
+.contactOff p {
+    margin-left:20px;
+
+    color: rgb(255, 57, 0);
+    font-size: 24px;
+    letter-spacing:1px;
+}
+
+#logo{
+    display:inline;
+    position:absolute;
+    margin-top: 140px;
+    margin-left: 23%;
+    font-weight:bold;
+}
+
+#logo p{
+
+
+font-weight:bold;
+
+
+
+}
+
+.logoOn{
+    color: rgb(255, 57, 0);
+    font-size: 140px;
+    font-family:'P22 Johnston Underground', sans-serif;
+    font-weight:bold;
+
+
+}
+
+.logoOff{
+    color: rgb(185, 185, 185);
+    font-size: 140px;
+    font-family:'P22 Johnston Underground', sans-serif;
+    font-weight:bold;
+
+
+}
+
+#boxOne{
+
+
+
+
+
+
+
+}
+
+.boxOneFirst{
+display:none;
+position:absolute;
+top:0px;
+left: 0px;
+width:0px;
+height: 100%;
+
+
+background-color: rgb(200, 200, 200);
+-webkit-animation-name: moveBoxClose;
+-webkit-animation-duration: .5s;
+-webkit-animation-count:infinite;
+-webkit-animation-fill-mode: forwards;
+
+}
+
+@-webkit-keyframes moveBoxClose{
+    from{
+    width: 200px;
+
+    }
+    to{
+    width:0px;
+    }
+}
+
+
+
+
+.boxOneMove{
+
+-webkit-animation-name: moveBox;
+-webkit-animation-duration: .5s;
+-webkit-animation-count:infinite;
+-webkit-animation-fill-mode: forwards;
+
+}
+
+@-webkit-keyframes moveBox{
+    from{
+    width: 0px;
+
+    }
+    to{
+    width:250px;
+    }
+}
+
+@keyframes moveBox{
+
+    from{
+    width: 0px;
+
+    }
+    to{
+    width:250px;
+    }
+
+}
+
+.textBoxFirst{
+    position:absolute;
+    display:none;
+    color: rgb(255, 255, 255);
+    font-family:'P22 Johnston Underground', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    -webkit-animation-name: moveTextClose;
+    -webkit-animation-duration: .4s;
+    -webkit-animation-count:infinite;
+    -webkit-animation-fill-mode: forwards;
+
+
+}
+
+@-webkit-keyframes moveTextClose{
+
+    from{
+        margin-left: 20px;
+
+    }
+
+    to{
+        margin-left:-210px;
+
+    }
+}
+
+@keyframes moveTextClose{
+
+    from{
+        margin-left: 20px;
+
+    }
+
+    to{
+        margin-left:-210px;
+
+    }
+}
+
+.textBoxOn{
+    display:inline;
+
+    -webkit-animation-name: moveText;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-count:infinite;
+    -webkit-animation-fill-mode: forwards;
+
+
+
+}
+.textBoxOn {
+    color:rgb(255, 255, 255);
+    font-weight:300;
+}
+
+@-webkit-keyframes moveText{
+
+    from{
+        margin-left: -160px;
+    }
+
+    to{
+        margin-left:20px;
+    }
+}
+
+#textBox h1{
+    color:rgb(0, 0, 0);
+    font-size: 60px;
+    letter-spacing:2px;
+    font-weight:300;
+
+}
+
+#textBox h2{
+    margin-top: 20px;
+    font-size:50px;
+    letter-spacing: 1.5px;
+
+    color: rgb(255, 255,  255);
+    font-family: 'Bitter', serif;
+
+}
+
+#textBox h3{
+    display: inline;
+    position:absolute;
+    margin-top: 9px;
+    font-size:30px;
+    font-weight: 500;
+    font-family: 'Bitter', serif;
+    letter-spacing:1px;
+    color: rgb(0,0,0);
+
+}
+
+#textBox h4{
+    margin-top: 350px;
+    font-size:16px;
+    font-weight: 500;
+
+    font-family: 'Bitter', serif;
+    color: rgb(20,20,20);
+
+}
+
+#textBox h4 a:link, #textBox h4 a:visited, #textBox h4 a:hover, #textBox h4 a:active{
+    text-decoration:none;
+    background-color: transparent;
+    color: black;
+}
+
+
+#textBox h5{
+position: absolute;
+margin-top: -60px;
+font-weight:300;
+font-family: 'Bitter', serif;
+color:rgb(0,0,0);
+}
+
+#textBox h6{
+display:inline;
+position:absolute;
+margin-top:-35px;
+
+font-size:30px;
+font-weight: 500;
+font-family: 'Merriweather', serif;
+color:rgb(0,0,0);
+}
+
+</style>
+
+<body>
+
+    <header>
+
+        <div id = "name">
+            <p>Cameron Priestley</p>
+        </div>
+
+            <div id = "about">
+                <p>ABOUT</p>
+            </div>
+
+                <div id = "work">
+                    <p><a href ="http://cargocollective.com/cameronpriestley">WORK</a></p>
+                </div>
+
+                    <div id = "contact">
+
+                        <p>CONTACT</p>
+
+                    </div>
+
+                    <div id = "contactBox" class = "contactPop">
+
+                        <div id = "contactEmail" class = "contactInfo">
+                            <p>cameronpriestley@gmail.com</p>
+                        </div>
+
+                    </div>
+
+    </header>
+
+        <div id = "logo" class = "logoOn">
+            <p>CAMERON.</p>
+        </div>
+
+            <div id = "boxOne" class = "boxOneFirst">
+
+                <div id = "textBox"  class = "textBoxFirst">
+
+                    <h1>Hi.</h1>
+                        <h2>I'm into</h2>
+                        <h3>Design,<br>Code,<br>and<br>Products.</h3>
+                        <h4><a href = "https://github.com/campriest">@github.com/campriest</a></h4>
+                        <h5></h5>
+                        <h6></h6>
+
+
+
+                </div>
+
+            </div>
+
+
+
+
+</body>
+
+<script>
+
+
+
+
+var guts = (function(){
+
+    var about = document.getElementById("about");
+    var work = document.getElementById("work");
+    var contact = document.getElementById("contact");
+    var box = document.getElementById("boxOne");
+    var text = document.getElementById("textBox");
+    var contactBox = document.getElementById("contactBox");
+    var contactEmail = document.getElementById("contactEmail");
+    var logo = document.getElementById("logo");
+
+    var tracker;
+
+    var aboutClick = function(){
+
+        about.getElementsByTagName("p")[0].onclick = function(){
+
+                box.classList.toggle("boxOneMove");
+                text.classList.toggle("textBoxOn");
+                box.style.display = "inline";
+                text.style.display = "inline";
+                tracker = false;
+
+                if(contactBox.style.display === "inline"){
+
+                    contactBox.style.display = "none";
+                    document.getElementsByClassName("logoOff").style.color = "rgb(255, 57, 0)"
+                }
+
+
+
+
+        }
+    };
+
+    var workClick = function(){
+
+
+
+    };
+
+    var contactClick = function(){
+            contact.onclick = function(){
+                contactBox.classList.toggle("contactOff");
+                contactBox.style.display = "inline";
+                contactEmail.classList.toggle("contactInfo");
+                logo.classList.toggle("logoOff");
+
+                    if(box.style.display === "inline" || contactBox.style.display === "inline"){
+
+                        box.style.display = "none";
+                    }
+
+
+                // contactBox.getElementsByTagName("p")[0].style.display = "inline";
+        }
+
+    };
+
+
+
+
+    return{
+
+            move: function(){
+
+                aboutClick();
+                contactClick();
+            }
+
+
+    }
+
+
+}());
+
+    guts.move();
+
+</script>
+
+
+</html>
